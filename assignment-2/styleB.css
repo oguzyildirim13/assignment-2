@@ -1,0 +1,52 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Tahoma, sans-serif;
+}
+
+.container {
+    /* Kutuların pencere küçülse bile alt satıra inmemesi için */
+    white-space: nowrap;
+    
+    /* Sol üst köşe hizalaması varsayılan davranıştır */
+}
+
+.box {
+    /* Boyutlar ve Kenarlıklar */
+    width: 100px;
+    height: 150px;
+    background-color: #eeeff2;
+    border-left: 10px dotted #D0D0FF; /* Görseldeki noktalı kenarlık */
+    
+    /* Yan yana dizilim */
+    display: inline-block;
+    vertical-align: top;
+    
+    /* Aralıklar */
+    margin-right: 10px; /* Kutular arası 10px boşluk */
+    padding-left: 10px; /* Harf ile kutu kenarı arasındaki 10px boşluk */
+    padding-top: 0;     /* Üstten boşluk belirtilmemiş, varsayılan */
+    
+    font-size: 40px;
+    
+    /* ÖNEMLİ: Border ve Padding'in genişliğe dahil olması için */
+    box-sizing: border-box; 
+}
+
+/* Mouse üzerine gelince (Hover) */
+.box:hover {
+    cursor: pointer;      /* El işareti */
+    background-color: yellow;
+    color: goldenrod;
+}
+
+/* Son kutu (F) için özel pozisyonlama */
+.box:last-child {
+    /* Pencerenin sağ alt köşesine sabitleme */
+    position: fixed; 
+    bottom: 0;
+    right: 0;
+    
+    /* Margin sıfırlama (sağ alta tam oturması için) */
+    margin: 0; 
+}
